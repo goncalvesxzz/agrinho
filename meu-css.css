@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Cabeçalho / Logo */
+.cabecalho {
+  padding: 80px;
+  text-align: center;
+  background: #000000;
+  color: white;
+}
+
+/* Ajusta o tamanho da fonte do cabeçalho */
+.cabecalho h1 {
+  font-size: 40px;
+}
+
+/* Barra de navegação no topo */
+.navbar {
+  overflow: hidden;
+  background-color: #cf1b1b;
+}
+
+/* Estilo da barra de navegação */
+.navbar a {
+  float: left;
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Alinha o link na direita */
+.navbar a.right {
+  float: right;
+}
+
+/* Muda cor quando o mouse passa */
+.navbar a:hover {
+  background-color: #000000;
+  color: black;
+}
+
+/* Container da Coluna */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Main */
+.principal {
+  display: flex;   
+  flex: 70%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - quando a tela for menor que 700px o conteúdo fica um em cima do outro*/
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - links encima um do outro quando a tela for menor que 400px */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*detalhes da caixa do produto*/
+.produto {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: auto;
+    margin: 50px;
+  }
+  
+  /*efeito quando passa o mouse na caixa do produto*/
+  .produto:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /*cria a caixa do produto*/
+  .caixa-produto {
+    padding: 2px 16px;
+  }
+
+/* id para ajustar a imagem do produto*/
+#img-produto {
+    max-height: 250px;
+    width: auto;
+}
